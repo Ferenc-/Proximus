@@ -1,0 +1,15 @@
+[package]
+name = "Proximus"
+version = "0.1.0"
+edition = "2025"
+
+[dependencies]
+adw = { package = "libadwaita", version = "0.7", features = ["v1_6"] }
+gettext-rs = { version = "0.7", features = ["gettext-system"] }
+gtk = { package = "gtk4", version = "0.9", features = ["gnome_47"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = "debuginfo"
+
